@@ -1,11 +1,47 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/ivan/Development/flatiron/code/amoeba-circus-on-rails-ruby-003/app/controllers/acts_controller.rb": [
+        1,
+        null
+      ],
+      "/Users/ivan/Development/flatiron/code/amoeba-circus-on-rails-ruby-003/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null
+      ],
+      "/Users/ivan/Development/flatiron/code/amoeba-circus-on-rails-ruby-003/app/controllers/amoebas_controller.rb": [
+        1,
+        null
+      ],
+      "/Users/ivan/Development/flatiron/code/amoeba-circus-on-rails-ruby-003/app/models/act_amoeba.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
       "/Users/ivan/Development/flatiron/code/amoeba-circus-on-rails-ruby-003/app/models/act.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/ivan/Development/flatiron/code/amoeba-circus-on-rails-ruby-003/app/models/amoeba.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/ivan/Development/flatiron/code/amoeba-circus-on-rails-ruby-003/app/models/talent.rb": [
+        1,
         1,
         null
       ]
     },
-    "timestamp": 1384036648
+    "timestamp": 1384123401
   }
 }

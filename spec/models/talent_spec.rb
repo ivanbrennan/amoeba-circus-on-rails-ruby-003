@@ -1,5 +1,8 @@
 require 'spec_helper'
 
 describe Talent do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it 'has a name' do
+    Talent.create(:name => 'acrobat')
+    expect(Talent.last.name).to eq('acrobat')
+  end
 end
