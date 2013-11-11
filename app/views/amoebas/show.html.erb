@@ -1,0 +1,14 @@
+<ul>
+  <li><%= @amoeba.name %> Amoeba</li>
+  <li>Generation <%= @amoeba.generation %></li>
+  <li>Talent <%= @amoeba.talent.name %></li>
+  <li><%= link_to "split!", amoeba_split_path(@amoeba) %></li>
+  <li>
+    Acts
+    <ol>
+      <% @amoeba.acts.each do |act| %>
+        <li><%= act.name %></li>
+      <% end %>
+    </ol>
+  </li>
+</ul>
