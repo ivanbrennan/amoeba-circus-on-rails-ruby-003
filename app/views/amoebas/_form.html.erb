@@ -1,20 +1,20 @@
 <form action="/amoebas/<%= @amoeba.id %>" id="edit_amoeba_<%= @amoeba.id %>"method="post">
+  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
   <div>
     <label for="amoeba_name">Name</label><br>
-    <input id="amoeba_name" name="amoeba[name]" type="text" value="<%= @amoeba.name %>">
+    <input id="amoeba_name" name="amoeba[name]" type="text" value="<%= @amoeba.name %>" value="<%= @amoeba.name %>">
   </div>
 
-  <div>
-    <label for="amoeba_talent">Name</label><br>
-    <input id="amoeba_talent" name="amoeba[talent]" type="text" value="<%= @amoeba.talent %>">
-  </div>
-
-  <div>
-    <label for="amoeba_acts">Name</label><br>
-    <input id="amoeba_acts" name="amoeba[acts]" type="text" value="<%= @amoeba.acts %>">
+  <% @acts.each do |act| %>
+    <p>
+    <label for="<%= act.name %>"><%= act.name %></label>
+    <input id="<%= act.name %>" name="amoeba[acts][]" type="checkbox" value="<%= act.id %>" <%= "checked" if @amoeba.acts.include?(act) %>>
+    </p>
+  <% end %>
   </div>
 
   <div>
     <input name="commit" type="submit" value="Update Amoeba">
 
   </div>
+</form>

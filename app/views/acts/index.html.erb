@@ -1,0 +1,7 @@
+<div>
+  <ul>
+    <% @acts.each do |act| %>
+      <li><a href="/acts/<%= act.id %>"><%= act.name %></a></li>
+    <% end %>
+  </ul>
+</div>

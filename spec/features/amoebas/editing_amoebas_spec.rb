@@ -8,20 +8,13 @@ describe "editing amoebas" do
         {:name => "Jugglers and Knives"},
         {:name => "Freakshow"}
       ])
-      Talent.create([
-        {:name => "acrobat"},
-        {:name => "contortionist"},
-        {:name => "clown"},
-        {:name => "juggler"},
-        {:name => "freak"}
-      ])
 
       @amoeba = Amoeba.create(:name=>"Ricky")
+      @amoeba.build_talent(:name=>'fast as hell')
       @amoeba.acts.build([
-        {:name=>"Car crash"},
+        {:name=>"Car_crash"},
         {:name=>"Smashup"}
       ])
-      @amoeba.build_talent(:name=>"dropkick")
       @amoeba.save
 
       visit edit_amoeba_path(@amoeba)
@@ -31,14 +24,27 @@ describe "editing amoebas" do
       expect(page).to have_css("form#edit_amoeba_#{@amoeba.id}")
     end
 
+    it "should display the amoeba's current values" do
+      expect(find_field('amoeba[name]').value).to eq('Ricky')
+      car_crash = find("#Car_crash")
+      smashup = find('#Smashup')
+      expect(car_crash).to be_checked
+      expect(smashup).to be_checked
+    end
+
     it "should update an amoeba when the form is submitted" do
       fill_in 'amoeba_name', with: "Ricky the Information Hoarder"
+      check('Rings of Fire')
+      uncheck('Smashup')
+
       click_button('Update Amoeba')
 
       expect(Amoeba.first.name).to eq("Ricky the Information Hoarder")
       expect(page).to have_content("Ricky the Information Hoarder")
+      expect(page).to have_content("Car_crash")
+      expect(page).to have_content("Rings of Fire")
+      expect(page).to_not have_content("Freakshow")
+      expect(page).to_not have_content("Smashup")
     end
-
-    it "can add/remove an amoeba to/from acts"
   end
 end

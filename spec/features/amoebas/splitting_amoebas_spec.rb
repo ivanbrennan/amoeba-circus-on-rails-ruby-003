@@ -9,7 +9,7 @@ feature "Amoeba" do
 
       @parent_id = @amoeba.id
 
-      visit amoeba_split_path(@amoeba)
+      visit split_amoeba_path(@amoeba)
       @children = Amoeba.last(2)
     end
 

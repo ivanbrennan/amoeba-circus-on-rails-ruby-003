@@ -1,0 +1,11 @@
+<div>
+  <p>Act: <%= @act.name %></p>
+  <p>Date: <%= @act.date %></p>
+  <p>Participating Amoebas:</p>
+  <ul>
+    <% @act.amoebas.each do |amoeba| %>
+      <li><%= amoeba.name %></li>
+    <% end %>
+  </ul>
+  <p><a href="/acts/<%= @act.id %>/edit">Edit</a></p>
+</div>

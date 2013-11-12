@@ -2,7 +2,7 @@
   <li><%= @amoeba.name %> Amoeba</li>
   <li>Generation <%= @amoeba.generation %></li>
   <li>Talent <%= @amoeba.talent.name %></li>
-  <li><%= link_to "split!", amoeba_split_path(@amoeba) %></li>
+  <li><%= link_to "split!", split_amoeba_path(@amoeba) %></li>
   <li>
     Acts
     <ol>
@@ -11,4 +11,5 @@
       <% end %>
     </ol>
   </li>
+  <li><%= link_to "edit", edit_amoeba_path(@amoeba) %></li>
 </ul>

@@ -3,6 +3,26 @@
     "coverage": {
       "/Users/ivan/Development/flatiron/code/amoeba-circus-on-rails-ruby-003/app/controllers/acts_controller.rb": [
         1,
+        1,
+        2,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        3,
+        3,
+        null,
+        null,
+        1,
+        1,
+        3,
+        1,
+        1,
+        1,
+        null,
         null
       ],
       "/Users/ivan/Development/flatiron/code/amoeba-circus-on-rails-ruby-003/app/controllers/application_controller.rb": [
@@ -13,6 +33,33 @@
         null
       ],
       "/Users/ivan/Development/flatiron/code/amoeba-circus-on-rails-ruby-003/app/controllers/amoebas_controller.rb": [
+        1,
+        1,
+        5,
+        null,
+        null,
+        1,
+        5,
+        null,
+        null,
+        1,
+        4,
+        4,
+        4,
+        12,
+        4,
+        4,
+        null,
+        null,
+        1,
+        3,
+        3,
+        null,
+        null,
+        1,
+        1,
+        3,
+        1,
         1,
         1,
         null,
@@ -36,6 +83,11 @@
         null,
         1,
         1,
+        null,
+        1,
+        8,
+        8,
+        null,
         null
       ],
       "/Users/ivan/Development/flatiron/code/amoeba-circus-on-rails-ruby-003/app/models/talent.rb": [
@@ -44,7 +96,7 @@
         null
       ]
     },
-    "timestamp": 1384126290
+    "timestamp": 1384299219
   },
   "Cucumber Features": {
     "coverage": {

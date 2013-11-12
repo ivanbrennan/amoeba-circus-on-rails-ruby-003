@@ -30,13 +30,4 @@ describe Amoeba do
     amoeba.acts.build(:name=>"Lego Fortress")
     expect(amoeba.acts.collect { |act| act.name }).to include("Lego Fortress")
   end
-
-  it 'can split'
-
-  context 'split' do
-    it 'disappears'
-    it 'produces two new amoebas'
-    it 'produces the next generation'
-    it 'produces amoebas with the same talent'
-  end
 end

@@ -2,10 +2,15 @@ AmoebaCircusOnRailsRuby003::Application.routes.draw do
 
   get '/amoebas' => 'amoebas#index'
 
-  get '/amoebas/:id/split' => 'amoebas#split', as: 'amoeba_split'
+  get '/amoebas/:id/split' => 'amoebas#split', as: 'split_amoeba'
   get '/amoebas/:id/edit' => 'amoebas#edit', as: 'edit_amoeba'
   get '/amoebas/:id' => 'amoebas#show', as: 'amoeba'
   post '/amoebas/:id' => 'amoebas#update'
+
+  get '/acts' => 'acts#index'
+  get '/acts/:id/edit' => 'acts#edit', :as => 'edit_act'
+  get '/acts/:id' => 'acts#show', :as => 'act'
+  post '/acts/:id' => 'acts#update'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

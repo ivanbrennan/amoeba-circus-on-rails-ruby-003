@@ -1,0 +1,32 @@
+<form action="/acts/<%= @act.id %>" id="edit_act_<%= @act.id %>" method="post">
+  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+
+  <div>
+  <label for="act_name">Name</label>
+  <input type="text" id="act_name" name="act[name]" value="<%= @act.name %>">
+  </div>
+
+  <div>
+  <label for="act_date">Date</label>
+  <input type="text" id="act_date" name="act[date]" value="<%= @act.date %>">
+  </div>
+
+  <div>
+  <label for="act_time">Time</label>
+  <input type="text" id="act_time" name="act[time]" value="<%= @act.time %>">
+  </div>
+
+  <div>
+    <h2>Amoebas</h2>
+    <% @amoebas.each do |amoeba| %>
+    <p>
+    <label for="<%= amoeba.name %>"><%= amoeba.name %></label>
+    <input id="<%= amoeba.name %>" name="act[amoebas][]" type="checkbox" value="<%= amoeba.id %>" <%= "checked" if @act.amoebas.include?(amoeba) %>>
+    </p>
+    <% end %>
+  </div>
+
+  <div>
+    <input name="commit" type="submit" value="Update Act">
+  </div>
+</form>

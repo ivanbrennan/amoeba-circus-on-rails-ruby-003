@@ -21,13 +21,17 @@ feature "Amoeba" do
     end
 
     it "should have a link to split the amoeba" do
-      expect(page).to have_link("split!", :href=>amoeba_split_path(@amoeba))
+      expect(page).to have_link("split!", :href=>split_amoeba_path(@amoeba))
     end
 
     it "should display the amoeba's acts" do
       expect(page).to have_content("Spoon-catchers")
       expect(page).to have_content("High-jump")
       expect(page).to have_content("Moonwalk")
+    end
+
+    it "should have a link to edit the amoeba" do
+      expect(page).to have_link("edit", :href=>edit_amoeba_path(@amoeba))
     end
   end
 end
